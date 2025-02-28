@@ -26,3 +26,56 @@ This repository contains two versions of a trading bot for Binance using a techn
    ```bash
    git clone <repository_url>
    cd <repository_directory>
+
+Install the required packages:
+```bash
+pip install ccxt pandas numpy python-dotenv
+```
+## Usage
+
+Backtest Version
+Run the backtest script:
+
+```bash
+python backtest.py
+```
+
+Input the trading pair:
+
+When prompted, enter a trading pair (e.g., BTC/USDT).
+
+Review the output:
+The script will fetch historical 4-hour data, calculate indicators, generate trade signals, and simulate trades. Detailed trade history will be logged, and any loss-making trades will be saved to loss_trades.json.
+
+Live Trading Version
+Create a .env file in the repository directory and add your Binance API keys:
+```bash
+BINANCE_API_KEY='your_api_key_here'
+BINANCE_API_SECRET='your_api_secret_here'
+```
+Run the live trading script:
+
+```bash
+python live_trader.py
+```
+
+Monitor live trades:
+The bot will continuously fetch 15-minute data, calculate indicators, generate trading signals, and execute trades using 75% of your USDT balance. A stop loss is triggered if the price falls to 85% of the entry price.
+
+## Disclaimer
+# WARNING: This trading bot is provided for educational and reference purposes only. Live trading involves significant risk. Thoroughly test and understand any strategy before using real funds. Use at your own risk.
+
+License
+This project is licensed under the MIT License.
+
+```bash
+---
+
+With these files you have:
+
+- **backtest.py:** For backtesting the strategy on historical 4h data.
+- **live_trader.py:** For live trading on Binance using 15m data.
+- **README.md:** Instructions on installation and usage.
+
+Feel free to modify the code or README as needed. Good luck and happy coding!
+```
