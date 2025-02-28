@@ -24,7 +24,7 @@ This repository contains two versions of a trading bot for Binance using a techn
 
 1. **Clone the repository:**
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/korhancosanergun/basic-binance-KDJ-SKDJ-Bollinger-trade-bot.git
    cd <repository_directory>
 
 Install the required packages:
